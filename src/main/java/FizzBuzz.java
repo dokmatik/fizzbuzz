@@ -10,6 +10,9 @@ public class FizzBuzz {
         if (i % 5 == 0) {
             returnValue += "Buzz";
         }
+        if (i == 1) {
+              returnValue += i;
+        }
 
         return returnValue;
     }
