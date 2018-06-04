@@ -13,5 +13,6 @@ public class TestFizzBuzz {
         assertEquals(fizzBuzz.fizzBuzz(3), "Fizz");
         assertEquals(fizzBuzz.fizzBuzz(5), "Buzz");
         assertEquals(fizzBuzz.fizzBuzz(15), "FizzBuzz");
+        assertEquals(fizzBuzz.fizzBuzz(1), "1");
     }
 }
