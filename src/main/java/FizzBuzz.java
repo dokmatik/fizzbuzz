@@ -5,10 +5,10 @@ public class FizzBuzz {
     public String fizzBuzz(int i) {
         String returnValue = "";
         if (i % 3 == 0) {
-            returnValue = "Fizz";
+            returnValue += "Fizz";
         }
         if (i % 5 == 0) {
-            returnValue = "Buzz";
+            returnValue += "Buzz";
         }
 
         return returnValue;
