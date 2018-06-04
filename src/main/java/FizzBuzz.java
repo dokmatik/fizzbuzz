@@ -12,7 +12,7 @@ public class FizzBuzz {
         if (teilbarDurch5) {
             returnValue += "Buzz";
         }
-        if (i == 1) {
+        if (!teilbarDurch3 && !teilbarDurch5) {
               returnValue += i;
         }
 
