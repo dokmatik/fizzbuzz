@@ -3,6 +3,11 @@
  */
 public class FizzBuzz {
     public String fizzBuzz(int i) {
-        return "Fizz";
+        String returnValue = "";
+        if (i % 3 == 0) {
+            returnValue = "Fizz";
+        }
+
+        return returnValue;
     }
 }
