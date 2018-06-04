@@ -1,4 +1,7 @@
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -7,19 +10,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 public class TestFizzBuzz {
 
-    @Test
-    public void testFizzBuzz() {
+
+    @ParameterizedTest(name = "\"{0}\" should be {1}")
+    @CsvSource({ "1, 1", "2, 2", "3, Fizz", "4, 4", "5, Buzz", "6, Fizz", "7, 7", "8, 8", "9, Fizz", "10, Buzz", "11, 11", "12, Fizz", "13, 13", "14, 14", "15, FizzBuzz", "16, 16", "17, 17", "18, Fizz", "19, 19", "20, Buzz"})
+    public void testFizzBuzz(int number, String expectedOutput) {
         FizzBuzz fizzBuzz = new FizzBuzz();
-        assertEquals(fizzBuzz.fizzBuzz(3), "Fizz");
-        assertEquals(fizzBuzz.fizzBuzz(5), "Buzz");
-        assertEquals(fizzBuzz.fizzBuzz(15), "FizzBuzz");
-        assertEquals(fizzBuzz.fizzBuzz(1), "1");
-        assertEquals(fizzBuzz.fizzBuzz(2), "2");
-        assertEquals(fizzBuzz.fizzBuzz(6), "Fizz");
-        assertEquals(fizzBuzz.fizzBuzz(7), "7");
-        assertEquals(fizzBuzz.fizzBuzz(8), "8");
-        assertEquals(fizzBuzz.fizzBuzz(9), "Fizz");
-        assertEquals(fizzBuzz.fizzBuzz(10), "Buzz");
-        assertEquals(fizzBuzz.fizzBuzz(11), "11");
+        assertEquals(fizzBuzz.fizzBuzz(number), expectedOutput);
     }
+
 }
