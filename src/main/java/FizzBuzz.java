@@ -7,6 +7,9 @@ public class FizzBuzz {
         if (i % 3 == 0) {
             returnValue = "Fizz";
         }
+        if (i % 5 == 0) {
+            returnValue = "Buzz";
+        }
 
         return returnValue;
     }
