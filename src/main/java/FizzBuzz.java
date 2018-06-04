@@ -4,10 +4,12 @@
 public class FizzBuzz {
     public String fizzBuzz(int i) {
         String returnValue = "";
-        if (i % 3 == 0) {
+        boolean teilbarDurch3 = i % 3 == 0;
+        boolean teilbarDurch5 = i % 5 == 0;
+        if (teilbarDurch3) {
             returnValue += "Fizz";
         }
-        if (i % 5 == 0) {
+        if (teilbarDurch5) {
             returnValue += "Buzz";
         }
         if (i == 1) {
